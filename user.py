@@ -14,10 +14,10 @@ class User:
         query = "SELECT * FROM users;"
         results = connectToMySQL(cls.esquema).query_db(query)
         
-        friends = []
-        for friend in results:
-            friends.append( cls(friend) )
-        return friends
+        users = []
+        for user in results:
+            users.append( cls(user) )
+        return users
 
     @classmethod
     def save(cls, data):
